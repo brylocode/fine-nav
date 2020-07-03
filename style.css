@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --base-color: rgb(107, 107, 107);
+    --active-color: rgb(216, 216, 216);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -42,7 +47,7 @@ body {
     width: 25px;
     height: 5px;
     border-radius: 5px;
-    background-color: rgb(107, 107, 107);
+    background-color: var(--base-color);
     margin: 4px 0;
     transition: width .1s;
     cursor: pointer;
@@ -50,7 +55,7 @@ body {
 
 .dot.active {
     width: 35px;
-    background-color: rgb(216, 216, 216);
+    background-color: var(--active-color);
     transition: background-color .1s;
 
 }
@@ -62,7 +67,7 @@ body {
     transition: visibility 0s, opacity .1s;
     visibility: hidden;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--active-color);
     opacity: 0;
 }
 
