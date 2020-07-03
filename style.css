@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 200vh;
+    background-color: rgb(20, 16, 43);
+    font-family: 'Roboto Condensed',
+        sans-serif;
+}
+
+.nav {
+    position: fixed;
+    left: 15px;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-element {
+    display: flex;
+    align-items: center;
+}
+
+.dot-box {
+    width: 35px;
+}
+
+.dot {
+    display: block;
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(107, 107, 107);
+    margin: 4px 0;
+    transition: width .1s;
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 35px;
+    background-color: rgb(216, 216, 216);
+    transition: background-color .1s;
+
+}
+
+.nav-link {
+    margin-left: 10px;
+    font-size: 0.6rem;
+    opacity: 0;
+    transition: visibility 0s, opacity .1s;
+    visibility: hidden;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+}
+
+.dot-box:hover .dot {
+    width: 35px;
+}
+
+.dot-box:hover~.nav-link {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* to fine display */
+
+section {
+    height: 100vh;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.199);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
