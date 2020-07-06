@@ -22,41 +22,45 @@ body {
         sans-serif;
 }
 
-.nav {
+.scroller-navigation {
     position: fixed;
-    left: 15px;
-    top: 60%;
+    left: 20px;
+    top: 50%;
     transform: translateY(-50%);
 }
 
-.nav-list {
+.scroller-navigation__list {
     list-style: none;
 }
 
-.nav-element {
+.scroller-navigation__element {
     display: flex;
     align-items: center;
 }
 
+.scroller-navigation__element+.scroller-navigation__element {
+    margin-top: 10px;
+}
+
+
 .dot-box {
-    width: 35px;
+    width: 40px;
 }
 
 .dot {
     display: block;
-    width: 25px;
-    height: 5px;
+    width: 30px;
+    height: 7px;
     border-radius: 5px;
     background-color: var(--base-color);
-    margin: 4px 0;
     transition: width .1s;
     cursor: pointer;
 }
 
 .dot.active {
-    width: 35px;
+    width: 45px;
     background-color: var(--active-color);
-    transition: background-color .1s;
+    transition: background-color .1s, width .1s;
 
 }
 
@@ -72,7 +76,7 @@ body {
 }
 
 .dot-box:hover .dot {
-    width: 35px;
+    width: 45px;
 }
 
 .dot-box:hover~.nav-link {
