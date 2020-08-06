@@ -70,7 +70,7 @@ class Scroller {
     //         listItem.innerHTML = `<div class="dot-box">
     //                 <a class="dot"></a>
     //             </div>
-    //             <a class="nav-link">fifth</a>`
+    //             <a class="nav-link">item</a>`
 
     //         listItem.addEventListener('click', () => {
     //             this.currentSectionIndex = index;
@@ -85,6 +85,8 @@ class Scroller {
 
     //     this.selectActiveNavItem();
     // }
+
+
     drawNavigation() {
         this.navigationContainer = document.createElement('aside');
         this.navigationContainer.setAttribute('class', 'scroller-navigation');
